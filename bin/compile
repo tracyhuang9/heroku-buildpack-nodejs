@@ -115,6 +115,7 @@ install_bins() {
   else
     warn_node_engine "$node_engine"
     install_nodejs "$node_engine" "$BUILD_DIR/.heroku/node"
+    npm update
     install_npm "$npm_engine" "$BUILD_DIR/.heroku/node" $NPM_LOCK
     mcount "version.node.$(node --version)"
   fi
